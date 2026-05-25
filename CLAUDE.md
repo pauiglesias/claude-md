@@ -2,7 +2,7 @@
 
 Instrucciones para agentes que trabajen en este repositorio. Este archivo es la fuente de verdad para `AGENTS.md`.
 
-> No modifiques `AGENTS.md` directamente. Es un puntero de solo lectura hacia `CLAUDE.md`; toda actualización de instrucciones va en este archivo.
+> No modifiques `AGENTS.md` directamente. Es un puntero de solo lectura hacia `CLAUDE.md`; toda actualización de instrucciones va en este archivo CLAUDE.md.
 
 La documentacion adicional para agentes vive solo en `docs/claude/`. El resto de documentacion del repositorio es para humanos y no debe tratarse como fuente de verdad para instrucciones de agente.
 
@@ -10,8 +10,17 @@ La documentacion adicional para agentes vive solo en `docs/claude/`. El resto de
 
 ## Reglas de trabajo
 
-- No modifiques `AGENTS.md`; si hay que actualizar instrucciones del proyecto, actualiza este archivo.
+- Escribe las instrucciones de CLAUDE.md en Español de España, excepto la nomenclatura técnica en su lenguaje de origen.
 - `CHANGELOG.md` solo debe actualizarse bajo peticion explicita. No lo mantengas automaticamente en cada cambio: no es fuente de verdad del proyecto, solo anotaciones que referencian el progreso. Antes de anadir entradas, carga y sigue `docs/claude/changelog-file.md`.
+- **NUNCA** navegar, buscar ni leer archivos fuera del directorio raíz del proyecto (`www/`).
+- Todas las herramientas de búsqueda y exploración (Glob, Grep, Read, etc.) deben limitarse a la carpeta del proyecto.
+- Respetar el archivo `.claudeignore`: no acceder nunca a los archivos o directorios listados en él.
+
+
+
+## Descripción del proyecto
+
+@todo
 
 
 
@@ -28,3 +37,46 @@ La documentacion adicional para agentes vive solo en `docs/claude/`. El resto de
 - Usa siempre `git -C <directorio-de-trabajo-primario>` para anclar git al directorio del proyecto, independientemente del CWD actual. El directorio de trabajo primario es el que contiene este `CLAUDE.md`. **Nunca** uses `cd` seguido de `&&` con git.
 - No ejecutes comandos de Git que expongan o modifiquen ficheros fuera de este directorio de trabajo.
 - Antes de ejecutar cualquier `git commit`, carga y sigue `docs/claude/git.md`.
+
+
+
+
+## Estilo de código JavaScript
+
+### Variables
+- Usa `const` por defecto, `let` cuando se necesita reasignación. Nunca uses `var`.
+
+### Bloques de control
+- **Nunca** escribir sentencias de una sola línea sin llaves. Siempre abrir bloque con `{`, salto de línea, cuerpo y `}`:
+```js
+// Mal
+if (!value) return true;
+
+// Bien
+if (!value) {
+	return true;
+}
+```
+- Después de cerrar un bloque con llaves hacer un salto de línea extra, a excepción de encontrarnos al final de la función o del archivo.
+
+
+
+## Estilos CSS con distribución jerárquica
+
+- Los estilos de administración se definen en `[main css assets file]`, evitando estilos inline.
+- Usar jerarquías CSS representadas por **indentación con espacios** (4 espacios por nivel) para selectores anidados:
+```css
+.dbi-dashboard-top {
+    margin-bottom: 15px;
+}
+
+    .dbi-views-panels-menu {
+        min-height: 100%;
+    }
+
+        .dbi-views-panels-menu ul {
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+```
