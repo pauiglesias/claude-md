@@ -11,7 +11,7 @@ La documentacion adicional para agentes vive solo en `docs/claude/`. El resto de
 ## Reglas de trabajo
 
 - Escribe las instrucciones de CLAUDE.md en Español de España, excepto la nomenclatura técnica en su lenguaje de origen.
-- **NUNCA** navegar, buscar ni leer archivos fuera del directorio raíz del proyecto (`www/`).
+- **NUNCA** navegar, buscar ni leer archivos fuera del directorio raíz del proyecto (donde reside este `CLAUDE.md`).
 - Todas las herramientas de búsqueda y exploración (Glob, Grep, Read, etc.) deben limitarse a la carpeta del proyecto.
 - Respetar el archivo `.claudeignore`: no acceder nunca a los archivos o directorios listados en él.
 - `CHANGELOG.md` solo debe actualizarse bajo peticion explicita. No lo mantengas automaticamente en cada cambio: no es fuente de verdad del proyecto, solo anotaciones que referencian el progreso. Antes de anadir entradas, carga y sigue `docs/claude/changelog-file.md`.
