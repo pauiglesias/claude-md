@@ -47,7 +47,7 @@ git -C /path/to/project log     # sin -- ., muestra commits de todo el repositor
 - No preguntes ni sugieras hacer commit al terminar una implementación.
 - Si te piden hacer un commit, usa un mensaje corto, concreto y estructurado.
 - No añadas trailers `Co-Authored-By` ni otros trailers de atribución automática salvo petición explícita del usuario.
-- Nunca uses `$()`, `cat`, heredoc ni sustitución de comandos en `git commit`.
+- Nunca uses `$()`, `cat`, heredoc ni sustitución de comandos en `git commit`. Para mensajes multi-línea, usa múltiples flags `-m`.
 
 ## Comentarios de commit
 
