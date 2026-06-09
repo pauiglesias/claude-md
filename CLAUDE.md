@@ -36,6 +36,7 @@ La documentacion adicional para agentes vive solo en `docs/claude/`. El resto de
 - Sí puedes usar comandos de inspección del estado actual como `git status -- .`, `git diff -- .` o `git diff --cached -- .` cuando sea necesario para proteger cambios existentes, revisar el trabajo en curso o responder a una petición de revisión. El sufijo `-- .` es obligatorio en todos los comandos de lectura para restringir el alcance al directorio de trabajo primario, incluso cuando la raíz `.git` está en un directorio superior.
 - Usa siempre `git -C <directorio-de-trabajo-primario>` para anclar git al directorio del proyecto, independientemente del CWD actual. El directorio de trabajo primario es el que contiene este `CLAUDE.md`. **Nunca** uses `cd` seguido de `&&` con git.
 - No ejecutes comandos de Git que expongan o modifiquen ficheros fuera de este directorio de trabajo.
+- No preguntes ni sugieras hacer commit al terminar una implementación.
 - Antes de ejecutar cualquier `git commit`, carga y sigue `docs/claude/git.md`.
 
 
