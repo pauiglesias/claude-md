@@ -11,8 +11,9 @@ La documentacion adicional para agentes vive solo en `docs/claude/`. El resto de
 ## Reglas de trabajo
 
 - Escribe las instrucciones de CLAUDE.md en Español de España, excepto la nomenclatura técnica en su lenguaje de origen.
-- **NUNCA** navegar, buscar ni leer archivos fuera del directorio raíz del proyecto (donde reside este `CLAUDE.md`).
+- **NUNCA** navegar, buscar ni leer archivos fuera del directorio raíz del proyecto (donde reside este `CLAUDE.md`). Esto incluye explícitamente `wp-config.php`, archivos .env de entorno y cualquier otro fichero de configuración de WordPress o del servidor.
 - Todas las herramientas de búsqueda y exploración (Glob, Grep, Read, etc.) deben limitarse a la carpeta del proyecto.
+- **NUNCA** obtener ni usar credenciales (base de datos, APIs, servicios externos) de ninguna forma: ni leyéndolas de un fichero fuera del proyecto, ni reconstruyéndolas u obteniéndolas mediante comandos, scripts, `print`/`echo`/`grep -o` u otra técnica indirecta, aunque el propio comando evite mostrarlas por pantalla. Si una tarea requiere acceso a la base de datos u otro sistema con credenciales, pedir al usuario que las proporcione o que ejecute él mismo la consulta/comando.
 - Respetar el archivo `.claudeignore`: no acceder nunca a los archivos o directorios listados en él.
 - `CHANGELOG.md` solo debe actualizarse bajo peticion explicita. No lo mantengas automaticamente en cada cambio: no es fuente de verdad del proyecto, solo anotaciones que referencian el progreso. Antes de anadir entradas, carga y sigue `docs/claude/changelog-file.md`.
 
