@@ -40,6 +40,8 @@ git -C /path/to/project log     # sin -- ., muestra commits de todo el repositor
   git -C <directorio-de-trabajo-primario> diff --cached --name-only -- .
   ```
 
+  > **Excepción explícita a la regla `-- .` de la sección "Comandos":** el primer comando se ejecuta deliberadamente sin `-- .`. Es el único caso en que se permite, porque la comparación en sí es la comprobación de seguridad: si hay ficheros staged fuera del directorio de trabajo, es precisamente el comando sin `-- .` el que los revela (el segundo, con `-- .`, los oculta por diseño). Limitado a `--name-only` sobre ficheros ya en staging (nunca contenido, nunca el repositorio completo), y usado solo para decidir si abortar el commit — no para explorar el repositorio.
+
   Si el output difiere, hay ficheros staged fuera del directorio de trabajo. Aborta el commit e informa al usuario.
 
 - No hagas commits sin orden explícita del usuario.
