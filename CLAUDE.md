@@ -27,7 +27,7 @@ La documentacion adicional para agentes vive solo en `docs/claude/`. El resto de
 
 ## Estado del proyecto
 
-El estado del proyecto, el último cambio realizado y el próximo planificado se documentan en `docs/claude/status.md`. Este documento no es fijo: cambia conforme evoluciona el proyecto. Cárgalo y consúltalo cuando el usuario pregunte por el estado del proyecto, el último cambio o el próximo planificado.
+El estado del proyecto, el último cambio realizado y el próximo planificado se documentan en `docs/claude/status.md`. Este documento no es fijo: cambia conforme evoluciona el proyecto, pero solo debe actualizarse bajo petición explícita del usuario, igual que `CHANGELOG.md` — no lo mantengas automáticamente en cada cambio. Cárgalo y consúltalo cuando el usuario pregunte por el estado del proyecto, el último cambio o el próximo planificado.
 
 
 
