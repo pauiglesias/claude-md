@@ -25,6 +25,12 @@ La documentacion adicional para agentes vive solo en `docs/claude/`. El resto de
 
 
 
+## Estado del proyecto
+
+El estado del proyecto, el último cambio realizado y el próximo planificado se documentan en `docs/claude/status.md`. Este documento no es fijo: cambia conforme evoluciona el proyecto. Cárgalo y consúltalo cuando el usuario pregunte por el estado del proyecto, el último cambio o el próximo planificado.
+
+
+
 ## Uso de Git
 
 > ⛔ **PROHIBIDO hacer commits sin orden explícita del usuario.**
