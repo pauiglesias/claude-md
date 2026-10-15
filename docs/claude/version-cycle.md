@@ -60,4 +60,10 @@ git -C <directorio-de-trabajo-primario> merge --no-ff 1.0.3-correccion-login -m 
 git -C <directorio-de-trabajo-primario> tag -a v1.0.3 -m "v1.0.3"
 ```
 
-Antes del merge, comprobar que el árbol está limpio (`git status -- .`) y que la rama a mergear es la elegida, no una alternativa descartada.
+Antes del `switch` a `main`, el `merge` y el `tag`, comprobar que el árbol de **todo el repositorio** está limpio y que la rama a mergear es la elegida, no una alternativa descartada. Si el árbol no está limpio, no se ejecuta ninguna de las tres operaciones: se informa al usuario y se espera sus instrucciones.
+
+```sh
+git -C <directorio-de-trabajo-primario> status
+```
+
+> **Excepción explícita a la regla `-- .` de `git.md`:** esta comprobación se ejecuta deliberadamente sin `-- .`, porque `switch`, `merge` y `tag` operan sobre todo el repositorio y cambios pendientes fuera del directorio de trabajo también los afectan. Es el único uso permitido de `git status` sin `-- .`, limitado a decidir si se continúa o se aborta, no a explorar el repositorio.
