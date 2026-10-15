@@ -16,6 +16,7 @@ La documentacion adicional para agentes vive solo en `docs/claude/`. El resto de
 - **NUNCA** obtener ni usar credenciales (base de datos, APIs, servicios externos) de ninguna forma: ni leyéndolas de un fichero fuera del proyecto, ni reconstruyéndolas u obteniéndolas mediante comandos, scripts, `print`/`echo`/`grep -o` u otra técnica indirecta, aunque el propio comando evite mostrarlas por pantalla. Si una tarea requiere acceso a la base de datos u otro sistema con credenciales, pedir al usuario que las proporcione o que ejecute él mismo la consulta/comando.
 - Respetar el archivo `.claudeignore`: no acceder nunca a los archivos o directorios listados en él.
 - `CHANGELOG.md` solo debe actualizarse bajo peticion explicita. No lo mantengas automaticamente en cada cambio: no es fuente de verdad del proyecto, solo anotaciones que referencian el progreso. Antes de anadir entradas, carga y sigue `docs/claude/changelog-file.md`.
+- Antes de cualquier tarea del ciclo de versiones (crear la rama `X.Y.Z-slug`, subir la versión, hacer un hotfix, cerrar la release, desplegar, o mergear a `main` con `--no-ff` y crear el tag), carga y sigue `docs/claude/version-cycle.md`. Es un ciclo asistido: propón cada paso y espera la aprobación del usuario antes de ejecutarlo.
 
 
 
